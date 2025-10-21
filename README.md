@@ -1,18 +1,45 @@
-# Clean push (create fresh repo without history)
+# 🧠 NutriSense – AI-Powered Personalized Diet Planner  
 
-If GitHub rejected your push due to large files in history (for example a committed virtualenv or compiled binaries like xgboost.dll), you can create a fresh repository snapshot without history and push it.
+> **Smart. Adaptive. Sensor-Free Nutrition.**
 
-1. Create a new empty repository on GitHub (do not initialize with README/license).
-2. From this repo root, run the helper script and provide the new remote URL when prompted:
+---
 
-```powershell
-.\clean_push.ps1
-# then paste the new repo URL when asked
+## 🌍 Overview  
+
+**NutriSense** is an innovative AI-based nutrition planning system that delivers **personalized diet recommendations** based on user health parameters such as age, gender, BMI, and activity level.  
+
+Unlike traditional fitness or diet apps that rely on external wearables or static data, NutriSense uses a **sensor-free personalization approach** powered by **machine learning** to dynamically adjust nutrition goals and meal plans in real time.  
+
+The system also includes a **responsive web dashboard** that enables users to visualize nutrition data, track meal habits, and receive adaptive recommendations powered by feedback learning.  
+
+---
+
+## 💡 Innovation Highlights  
+
+| Innovation Area | Description |
+|------------------|-------------|
+| **AI-Driven Nutrition Prediction** | Predicts optimal macronutrient ratios using ML models. |
+| **Sensor-Free Personalization** | Eliminates the need for costly hardware devices. |
+| **Dynamic Meal Recommendations** | Suggests daily meals tailored to health metrics, preferences, and region. |
+| **User Feedback Adaptation** | Learns from user ratings and adjusts future predictions. |
+| **Real-Time Web Dashboard** | Tracks calorie intake and recommendation analytics visually. |
+| **Lightweight & Scalable Solution** | Built with modular Python backend and simple web frontend for easy scaling. |
+
+---
+
+## 🧩 Architecture Overview  
+
+```plaintext
+User Input → Preprocessing → ML Models (XGBoost, LightGBM) → Nutrition Prediction
+     ↓
+   Feedback Loop ← User Ratings & Behavior
+     ↓
+   Dynamic Meal Recommendations + Web Dashboard Visualization
 ```
 
-This will create an orphan branch `clean-main`, commit the current working tree (respecting `.gitignore`), set the given remote as `origin`, rename branch to `main`, and push.
+---
 
-Note: This does NOT delete the old remote's history. If you want to rewrite existing remote history instead, see the "history cleanup" instructions in the previous project notes.
+If you'd like any small edits (add contributors, license, badges, screenshots, or a short usage section), tell me what to include and I'll add it.
 
 SmartPlate – AI-Driven Personalized Nutrition System
 
