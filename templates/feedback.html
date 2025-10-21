@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Provide Feedback</h2>
+<form id="feedbackForm" class="row g-3">
+  <div class="col-md-4">
+    <label class="form-label">User ID</label>
+    <input type="number" class="form-control" name="user_id" required />
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Food ID</label>
+    <input type="number" class="form-control" name="food_id" required />
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Rating (1-5)</label>
+    <input type="number" min="1" max="5" class="form-control" name="rating" required />
+  </div>
+  <div class="col-12">
+    <label class="form-label">Comment</label>
+    <input type="text" class="form-control" name="comment" />
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  <div class="col-12">
+    <div id="feedbackMsg" class="text-success"></div>
+  </div>
+</form>
+{% endblock %}
+
+
